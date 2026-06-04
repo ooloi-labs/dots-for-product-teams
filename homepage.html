@@ -3,17 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dots — Homepage Wireframe</title>
+  <title>Dots — For Product Owners</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      color: #111;
-      background: #f5f5f3;
-      display: flex;
-      justify-content: center;
-      padding: 40px 16px;
+    
+    :root {
+    --bg: #FFFFFF;
+    --surface: var(--bg);
+    --surface-subtle: #F9F9F9;
+    --border: #E5E7EB;
+    --border-md: #D1D5DB;
+    --text: #0D0D0D;
+    --text2: #6B7280;
+    --text3: #9CA3AF;
+    --accent: #22C55E;
+    /*--accent-light: #F0F0EE;
+    --accent-dark: #000000;*/
+    --accent-bg: #DCFCE7;
+    --accent-text: #16A34A;
+    --tag-bg: #EFEFED;
+    --tag-text: #2A2A2A;
+    --warn-bg: #F5F5F3;
+    --warn-text: #5A5A5A;
+    /*--dark-bg: #111111;*/
+    --radius: 12px;
+    --radius-lg: 16px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04);
     }
+    
+    body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+       background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    }
+    
     .page {
       width: 100%;
       max-width: 900px;
@@ -51,9 +82,17 @@
       font-size: 11px; color: #999; text-transform: uppercase;
       letter-spacing: 0.08em; margin-bottom: 12px;
     }
-    h1 { font-size: 38px; font-weight: 500; line-height: 1.2; max-width: 520px; margin: 0 auto 16px; }
+     h1 { 
+    font-family: 'DM Sans', sans-serif; 
+    color: var(--text);
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+     }
     h2 { font-size: 24px; font-weight: 500; line-height: 1.3; margin-bottom: 32px; max-width: 500px; }
-    .subtitle { font-size: 15px; color: #555; line-height: 1.65; max-width: 440px; margin: 0 auto 32px; }
+  .subtitle { font-size: 15px; color: var(--text2); line-height: 1.6; max-width: 520px;}
 
     /* Hero */
     .hero { text-align: center; }
@@ -163,24 +202,28 @@
   <!-- Nav -->
   <nav>
     <div class="nav-logo">
-      <div class="nav-logo-dot"></div>
-      <span>dots</span>
+      <div class="nav-logo-dot">
+     <a href="https://getdots.in" target="_blank" rel="noopener noreferrer" style="display: inline-block;">
+      <img src="https://framerusercontent.com/images/uB1AWiA6HkyTs5iUu7VSs7YdsfA.png?scale-down-to=512&width=1549&height=640" alt="Dots" style="height: 28px; width: auto; display: block;"/>
+     </a>
+    </div>
     </div>
     <div class="nav-links">
-      <span>How it works</span>
+      <span>Product</span>
+      <span>Case Studies</span>
       <span>Pricing</span>
-      <span>Customers</span>
+      <span>Insights Hub</span>
     </div>
-    <div class="btn-primary">Request a demo</div>
+    <div class="btn-primary">Get a demo</div>
   </nav>
 
   <!-- Hero -->
   <section class="hero">
     <div class="hero-badge">AI-powered product insights</div>
-    <h1>The last mile of product analytics — automated.</h1>
-    <p class="subtitle">Dots aggregates customer feedback from every channel and surfaces deep, traceable patterns — so PMs always know not just what's happening, but why.</p>
+    <h1>Product decisions deserve better than guesswork. <br> Build on user evidence </h1>
+    <p class="subtitle">Stop losing weeks to scattered feedback and manual analysis. Turn user signals into traceable insights your team can trust.</p>
     <div class="hero-ctas">
-      <div class="btn-primary" style="font-size:14px; padding: 11px 24px;">Request a demo</div>
+      <div class="btn-primary" style="font-size:14px; padding: 11px 24px;">Book a demo</div>
       <div class="btn-secondary">See how it works</div>
     </div>
     <div class="screenshot-placeholder">[ product screenshot ]</div>
