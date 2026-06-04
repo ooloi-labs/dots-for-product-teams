@@ -1,0 +1,1018 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .hp {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--color-text-primary);
+    background: var(--color-background-primary);
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 680px;
+    overflow-x: hidden;
+  }
+
+  .serif { font-family: 'DM Serif Display', serif; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    margin-bottom: 8px;
+  }
+
+  .divider {
+    border: none;
+    border-top: 0.5px solid var(--color-border-tertiary);
+    margin: 0;
+  }
+
+  /* NAV */
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    position: sticky;
+    top: 0;
+    background: var(--color-background-primary);
+    z-index: 10;
+  }
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: var(--color-text-primary);
+  }
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--color-text-secondary);
+  }
+  .nav-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .btn-ghost {
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: var(--border-radius-md);
+    border: 0.5px solid var(--color-border-secondary);
+    background: transparent;
+    color: var(--color-text-primary);
+    cursor: pointer;
+  }
+  .btn-primary {
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: var(--border-radius-md);
+    border: none;
+    background: var(--color-text-primary);
+    color: var(--color-background-primary);
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 64px 24px 48px;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    border: 0.5px solid var(--color-border-secondary);
+    border-radius: 100px;
+    padding: 4px 10px;
+    margin-bottom: 24px;
+  }
+  .hero-eyebrow-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #1D9E75;
+    flex-shrink: 0;
+  }
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 38px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+    max-width: 520px;
+    margin-bottom: 20px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--color-text-secondary);
+  }
+  .hero-sub {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    max-width: 480px;
+    margin-bottom: 32px;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  .btn-hero-primary {
+    padding: 10px 20px;
+    background: var(--color-text-primary);
+    color: var(--color-background-primary);
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .btn-hero-secondary {
+    padding: 10px 20px;
+    background: transparent;
+    color: var(--color-text-primary);
+    border: 0.5px solid var(--color-border-secondary);
+    border-radius: var(--border-radius-md);
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .proof-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .proof-chip {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    padding: 5px 10px;
+    background: var(--color-background-secondary);
+  }
+  .proof-chip strong {
+    color: var(--color-text-primary);
+    font-weight: 500;
+  }
+
+  /* OUTCOMES */
+  .section {
+    padding: 52px 24px;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+  .section-header {
+    margin-bottom: 32px;
+  }
+  .section-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+  .section-header p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    max-width: 420px;
+  }
+  .outcome-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+  }
+  .outcome-card {
+    background: var(--color-background-primary);
+    padding: 20px;
+    border-right: 0.5px solid var(--color-border-tertiary);
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+  .outcome-card:nth-child(2n) { border-right: none; }
+  .outcome-card:nth-last-child(-n+2) { border-bottom: none; }
+  .outcome-icon {
+    width: 28px; height: 28px;
+    border-radius: var(--border-radius-md);
+    background: var(--color-background-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+  .outcome-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--color-text-primary);
+  }
+  .outcome-card p {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+
+  /* PERSONAS */
+  .persona-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .persona-card {
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 18px;
+    background: var(--color-background-primary);
+  }
+  .persona-tag {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    margin-bottom: 10px;
+  }
+  .persona-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .persona-card p {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+
+  /* INTEGRATIONS */
+  .integrations-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+  .integrations-sub {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-bottom: 28px;
+    max-width: 400px;
+  }
+  .integration-flow {
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 20px;
+    background: var(--color-background-secondary);
+  }
+  .sources-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .source-chip {
+    font-size: 12px;
+    padding: 5px 10px;
+    border: 0.5px solid var(--color-border-secondary);
+    border-radius: var(--border-radius-md);
+    background: var(--color-background-primary);
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .arrow-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 14px;
+  }
+  .arrow-line {
+    flex: 1;
+    height: 0.5px;
+    background: var(--color-border-secondary);
+  }
+  .dots-pill {
+    padding: 8px 20px;
+    background: var(--color-text-primary);
+    color: var(--color-background-primary);
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'DM Serif Display', serif;
+    white-space: nowrap;
+  }
+  .output-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .output-chip {
+    font-size: 12px;
+    padding: 5px 10px;
+    border: 0.5px solid var(--color-border-secondary);
+    border-radius: var(--border-radius-md);
+    background: var(--color-background-primary);
+    color: var(--color-text-secondary);
+  }
+
+  /* HOW IT WORKS */
+  .steps-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+  }
+  .step {
+    padding: 18px 16px;
+    border-right: 0.5px solid var(--color-border-tertiary);
+    background: var(--color-background-primary);
+  }
+  .step:last-child { border-right: none; }
+  .step-num {
+    font-size: 11px;
+    color: var(--color-text-tertiary);
+    margin-bottom: 8px;
+  }
+  .step h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .step p {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+
+  /* AI */
+  .ai-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 28px;
+  }
+  .ai-card {
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 18px;
+  }
+  .ai-prompt {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .ai-prompt::before {
+    content: '"';
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    line-height: 0;
+    vertical-align: -4px;
+    color: var(--color-text-tertiary);
+    margin-right: 2px;
+  }
+  .ai-result {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+  .ai-result strong {
+    color: var(--color-text-primary);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 3px;
+    font-size: 13px;
+  }
+
+  /* SECURITY */
+  .security-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .security-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    background: var(--color-background-primary);
+    font-size: 13px;
+    font-weight: 500;
+    flex: 1;
+    min-width: 140px;
+  }
+  .security-badge i { color: var(--color-text-secondary); }
+
+  /* PROOF */
+  .proof-grid {
+    display: grid;
+    gap: 10px;
+  }
+  .proof-card {
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 20px;
+    background: var(--color-background-primary);
+  }
+  .proof-metrics {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 14px;
+  }
+  .proof-metric {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    color: var(--color-text-primary);
+  }
+  .proof-metric-label {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin-top: 2px;
+  }
+  .proof-quote {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+  .proof-attr {
+    font-size: 12px;
+    color: var(--color-text-tertiary);
+  }
+  .proof-attr strong {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .proof-tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: var(--border-radius-md);
+    background: var(--color-background-info);
+    color: var(--color-text-info);
+    margin-bottom: 12px;
+  }
+
+  /* LOGOS */
+  .logos-section {
+    padding: 36px 24px;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+  }
+  .logos-label {
+    font-size: 12px;
+    color: var(--color-text-tertiary);
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .logos-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  .logo-placeholder {
+    height: 28px;
+    border-radius: var(--border-radius-md);
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: var(--color-text-tertiary);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  /* USE CASES */
+  .usecase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .usecase-card {
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 18px;
+    background: var(--color-background-primary);
+  }
+  .usecase-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .usecase-card p {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  .usecase-link {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    padding: 64px 24px;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    text-align: center;
+  }
+  .final-cta h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .final-cta p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-bottom: 28px;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .final-cta-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  .final-note {
+    font-size: 12px;
+    color: var(--color-text-tertiary);
+    margin-top: 16px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 32px 24px 24px;
+    background: var(--color-background-secondary);
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  .footer-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .footer-tagline {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+  .footer-col h4 {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .footer-col a {
+    display: block;
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  .footer-bottom {
+    border-top: 0.5px solid var(--color-border-tertiary);
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .footer-bottom-left {
+    font-size: 12px;
+    color: var(--color-text-tertiary);
+  }
+  .footer-bottom-right {
+    display: flex;
+    gap: 16px;
+  }
+  .footer-bottom-right a {
+    font-size: 12px;
+    color: var(--color-text-tertiary);
+    text-decoration: none;
+  }
+
+  .anno {
+    font-size: 10px;
+    color: var(--color-text-tertiary);
+    border: 0.5px dashed var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    padding: 3px 7px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+</style>
+
+<div class="hp">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-logo">Dots</div>
+    <div class="nav-links">
+      <span>Product</span>
+      <span>Solutions ▾</span>
+      <span>Integrations</span>
+      <span>Pricing</span>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-ghost">Sign in</button>
+      <button class="btn-primary">Get a demo</button>
+    </div>
+  </nav>
+
+  <!-- 1. HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot"></span>
+      For PMs, Research & MEL Teams
+    </div>
+
+    <h1>
+      From user signal to <em>decision</em> —<br>
+      without the synthesis backlog
+    </h1>
+
+    <p class="hero-sub">
+      Dots consolidates your interviews, field reports, NPS responses, and surveys into one workspace. Your team gets to findings faster. Stakeholders get answers, not spreadsheets.
+    </p>
+
+    <div class="hero-ctas">
+      <button class="btn-hero-primary">Book a demo</button>
+      <button class="btn-hero-secondary">
+        <i class="ti ti-player-play" aria-hidden="true" style="font-size:13px;"></i>
+        Watch 2-min overview
+      </button>
+    </div>
+
+    <div class="proof-strip">
+      <div class="proof-chip"><strong>60% faster</strong> synthesis — Noora Health</div>
+      <div class="proof-chip"><strong>4 tools → 1</strong> workspace — Catapult Design</div>
+      <div class="proof-chip"><strong>3,000+ interviews</strong> analyzed across programs</div>
+    </div>
+
+    <div style="margin-top: 18px;">
+      <div class="section-label">↓ scroll for the full picture</div>
+    </div>
+  </section>
+
+  <!-- 2. OUTCOMES -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Why teams switch to Dots</div>
+      <h2>What you'll actually get</h2>
+      <p>Four things PMs and research leads tell us changed after moving to Dots.</p>
+    </div>
+
+    <div class="outcome-grid">
+      <div class="outcome-card">
+        <div class="outcome-icon"><i class="ti ti-clock" aria-hidden="true"></i></div>
+        <h3>Reports in hours, not weeks</h3>
+        <p>Stop manually coding transcripts or hunting across Notion, Drive, and email. Synthesis that used to take 2 weeks takes a day.</p>
+      </div>
+      <div class="outcome-card">
+        <div class="outcome-icon"><i class="ti ti-layers-intersect" aria-hidden="true"></i></div>
+        <h3>Cross-project pattern recognition</h3>
+        <p>See themes emerging across 10 studies or 5 geographies at once — not just what your last sprint uncovered.</p>
+      </div>
+      <div class="outcome-card">
+        <div class="outcome-icon"><i class="ti ti-users" aria-hidden="true"></i></div>
+        <h3>No more insight silos</h3>
+        <p>PMs, program leads, and external partners work from the same repository. No more "can you forward that transcript?" emails.</p>
+      </div>
+      <div class="outcome-card">
+        <div class="outcome-icon"><i class="ti ti-chart-bar" aria-hidden="true"></i></div>
+        <h3>Stakeholder-ready outputs</h3>
+        <p>Go from raw data to slide-ready summaries without an analyst in the loop for every deliverable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. WHO IT'S FOR -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Who it's for</div>
+      <h2>Built for three types of teams</h2>
+      <p>Each role gets what they need — no one's buying a tool meant for someone else.</p>
+    </div>
+
+    <div class="persona-grid">
+      <div class="persona-card">
+        <div class="persona-tag">Product & UX</div>
+        <h3>Stop guessing what users mean</h3>
+        <p>Pull together interviews, NPS verbatims, and support tickets in one place. Ask questions across all of it. Ship with evidence, not instinct.</p>
+      </div>
+      <div class="persona-card">
+        <div class="persona-tag">Research & Insights</div>
+        <h3>Scale your qual without scaling headcount</h3>
+        <p>Run large-scale studies across geographies. AI handles first-pass coding. You handle the judgment calls.</p>
+      </div>
+      <div class="persona-card">
+        <div class="persona-tag">MEL & Program</div>
+        <h3>Connect field data to program decisions</h3>
+        <p>Centralize data from multi-site field research. Track themes across reporting cycles. Get to your donor deliverables without the manual crunch.</p>
+      </div>
+      <div class="persona-card">
+        <div class="persona-tag">Ops & Strategy</div>
+        <h3>Turn distributed data into a shared view</h3>
+        <p>Standardize how qualitative evidence flows across teams, regions, and reporting periods — so decision-makers aren't flying blind.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. INTEGRATIONS -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Your existing stack, connected</div>
+    </div>
+    <div class="integrations-headline">Data in. Decisions out.<br>Dots fits where you already work.</div>
+    <p class="integrations-sub">Bring in data from your existing tools — no migration required. Dots normalizes it, links it, and makes it queryable.</p>
+
+    <div class="integration-flow">
+      <div class="sources-row">
+        <div class="source-chip"><i class="ti ti-file-text" aria-hidden="true"></i>Transcripts</div>
+        <div class="source-chip"><i class="ti ti-forms" aria-hidden="true"></i>Surveys / KoboToolbox</div>
+        <div class="source-chip"><i class="ti ti-star" aria-hidden="true"></i>NPS & CSAT</div>
+        <div class="source-chip"><i class="ti ti-ticket" aria-hidden="true"></i>Support tickets</div>
+        <div class="source-chip"><i class="ti ti-device-mobile" aria-hidden="true"></i>ODK / CommCare</div>
+        <div class="source-chip"><i class="ti ti-chart-pie" aria-hidden="true"></i>Qualtrics</div>
+        <div class="source-chip"><i class="ti ti-mail" aria-hidden="true"></i>CRM exports</div>
+      </div>
+      <div class="arrow-row">
+        <div class="arrow-line"></div>
+        <div class="dots-pill">Dots</div>
+        <div class="arrow-line"></div>
+      </div>
+      <div class="output-row">
+        <div class="output-chip">Synthesized themes</div>
+        <div class="output-chip">Evidence repositories</div>
+        <div class="output-chip">Stakeholder reports</div>
+        <div class="output-chip">Decision briefs</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. HOW IT WORKS -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">How it works</div>
+      <h2>Four steps from data to decision</h2>
+    </div>
+
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Connect</h3>
+        <p>Import from your tools or collect directly. Structured and unstructured, all in.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Organize</h3>
+        <p>Tag, code, and structure data across projects, geographies, or time periods.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Analyze</h3>
+        <p>Surface patterns, run AI queries, and cross-reference across your full dataset.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Share</h3>
+        <p>Export to stakeholder reports, dashboards, or briefs — in the format they need.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. AI -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">AI that works for your role</div>
+      <h2>Not generic AI. Qual-native AI.</h2>
+      <p>Dots AI is trained to understand research context — it finds meaning in data the way a skilled analyst would, not just keywords.</p>
+    </div>
+
+    <div class="ai-grid">
+      <div class="ai-card">
+        <div class="ai-prompt">What's blocking adoption in our enterprise segment?</div>
+        <div class="ai-result">
+          <strong>For PMs</strong>
+          Synthesizes across interviews, tickets, and NPS to surface product blockers — ranked by frequency and severity.
+        </div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-prompt">Are there shifts in user sentiment across the last 3 cohorts?</div>
+        <div class="ai-result">
+          <strong>For research teams</strong>
+          Tracks theme evolution across studies. Shows what's new, what's persistent, what's fading.
+        </div>
+      </div>
+      <div class="ai-card">
+        <div class="ai-prompt">What are beneficiaries saying about the last program cycle?</div>
+        <div class="ai-result">
+          <strong>For MEL & program</strong>
+          Aggregates field data across sites and time periods. Flags discrepancies between regions automatically.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. SECURITY -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Security & compliance</div>
+      <h2>Your data stays yours</h2>
+    </div>
+
+    <div class="security-row">
+      <div class="security-badge">
+        <i class="ti ti-shield-check" aria-hidden="true" style="font-size:20px;"></i>
+        SOC 2 Type II
+      </div>
+      <div class="security-badge">
+        <i class="ti ti-lock" aria-hidden="true" style="font-size:20px;"></i>
+        GDPR compliant
+      </div>
+      <div class="security-badge">
+        <i class="ti ti-eye-off" aria-hidden="true" style="font-size:20px;"></i>
+        We never train on your data
+      </div>
+      <div class="security-badge">
+        <i class="ti ti-users" aria-hidden="true" style="font-size:20px;"></i>
+        Role-based access control
+      </div>
+    </div>
+
+    <div style="margin-top: 12px;">
+      <a href="#" style="font-size: 13px; color: var(--color-text-secondary);">Read our security overview <i class="ti ti-arrow-right" aria-hidden="true" style="font-size:12px; vertical-align:-1px;"></i></a>
+    </div>
+  </section>
+
+  <!-- 8. PROOF -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">In practice</div>
+      <h2>What teams actually changed</h2>
+    </div>
+
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div class="proof-tag">Product</div>
+        <div class="proof-metrics">
+          <div>
+            <div class="proof-metric">60%</div>
+            <div class="proof-metric-label">less time on synthesis</div>
+          </div>
+          <div>
+            <div class="proof-metric">4→1</div>
+            <div class="proof-metric-label">tools replaced</div>
+          </div>
+        </div>
+        <p class="proof-quote">Dots emerged as a powerful tool for research management — notably for its ability to capture, organize, and analyze qualitative data at a scale we couldn't manage before.</p>
+        <div class="proof-attr"><strong>Angela Hariche</strong>, CEO — Catapult Design</div>
+      </div>
+
+      <div class="proof-card">
+        <div class="proof-tag">MEL & Program</div>
+        <div class="proof-metrics">
+          <div>
+            <div class="proof-metric">12</div>
+            <div class="proof-metric-label">geographies, one workspace</div>
+          </div>
+          <div>
+            <div class="proof-metric">3×</div>
+            <div class="proof-metric-label">faster donor reporting</div>
+          </div>
+        </div>
+        <p class="proof-quote">Before Dots, every reporting cycle meant re-exporting everything from scratch. Now we have a single repository that carries forward across quarters.</p>
+        <div class="proof-attr"><strong>Program Director</strong> — International Health NGO</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. LOGOS -->
+  <div class="logos-section">
+    <div class="logos-label">Trusted by teams at</div>
+    <div class="logos-row">
+      <div class="logo-placeholder">Catapult Design</div>
+      <div class="logo-placeholder">Noora Health</div>
+      <div class="logo-placeholder">Dalberg</div>
+      <div class="logo-placeholder">IDEO.org</div>
+      <div class="logo-placeholder">Omidyar Network</div>
+      <div class="logo-placeholder">Swasti</div>
+      <div class="logo-placeholder">IDinsight</div>
+    </div>
+  </div>
+
+  <!-- 10. USE CASES -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Common starting points</div>
+      <h2>How teams use Dots first</h2>
+    </div>
+
+    <div class="usecase-grid">
+      <div class="usecase-card">
+        <h3>Multi-region program research</h3>
+        <p>Consolidate field data across sites, languages, and time periods — and surface cross-cutting themes in one report.</p>
+        <a href="#" class="usecase-link">See how it works <i class="ti ti-arrow-right" aria-hidden="true" style="font-size:12px;"></i></a>
+      </div>
+      <div class="usecase-card">
+        <h3>Continuous product discovery</h3>
+        <p>Link every user interview and NPS response to a feature area. Never lose a signal between sprints.</p>
+        <a href="#" class="usecase-link">See how it works <i class="ti ti-arrow-right" aria-hidden="true" style="font-size:12px;"></i></a>
+      </div>
+      <div class="usecase-card">
+        <h3>Participatory MEL</h3>
+        <p>Collect directly from beneficiaries in multiple languages. Analyze at scale without specialist coding skills.</p>
+        <a href="#" class="usecase-link">See how it works <i class="ti ti-arrow-right" aria-hidden="true" style="font-size:12px;"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FINAL CTA -->
+  <section class="final-cta">
+    <h2>Start with one project.<br>See the difference in a week.</h2>
+    <p>Bring in your last 20 interviews or your most recent field dataset. We'll show you what Dots surfaces.</p>
+    <div class="final-cta-actions">
+      <button class="btn-hero-primary">Book a demo</button>
+      <button class="btn-hero-secondary">Talk to sales</button>
+    </div>
+    <div class="final-note">No long onboarding. No commitment. Just your data.</div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Dots</div>
+        <div class="footer-tagline">Qualitative insights infrastructure for teams that need to move fast and prove impact.</div>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#">Collect</a>
+        <a href="#">Organize</a>
+        <a href="#">Analyze</a>
+        <a href="#">Integrations</a>
+        <a href="#">Security</a>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="#">For PMs</a>
+        <a href="#">For Research</a>
+        <a href="#">For MEL</a>
+        <a href="#">Enterprise</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">Case studies</a>
+        <a href="#">Pricing</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">© 2025 Dots. All rights reserved.</div>
+      <div class="footer-bottom-right">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of service</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
