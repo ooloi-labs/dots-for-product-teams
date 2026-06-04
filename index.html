@@ -29,17 +29,36 @@
     --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04);
   }
 
-  body {
+ body {
     font-family: 'DM Sans', -apple-system, sans-serif;
     background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
     -webkit-font-smoothing: antialiased;
   }
-  .page {
+   .page {
     max-width: 1060px;
     margin: 0 auto;
     padding: 48px 24px 100px;
   }
 
+  /* Header */
+  .header { margin-bottom: 48px; }
+  .logo-row { margin-bottom: 20px; }
+
+  h1 { 
+    font-family: 'DM Sans', sans-serif; 
+    color: var(--text);
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    line-height: 1.15;
+    margin-bottom: 10px;
+     }
+  .subtitle { font-size: 15px; color: var(--text2); line-height: 1.6; max-width: 520px;} 
+  
 </style>
 </head>
   
@@ -56,7 +75,7 @@
     background: var(--bg);
     font-size: 15px;
     line-height: 1.6;
-    max-width: 680px;
+    max-width: 1060px;
     margin: 0 auto;
     overflow-x: hidden;
   }
@@ -790,8 +809,12 @@
 
   <!-- NAV -->
   <nav class="nav">
-    <div class="nav-logo">Dots</div>
-    <div class="nav-links">
+  <div class="header">
+    <div class="logo-row">
+     <a href="https://getdots.in" target="_blank" rel="noopener noreferrer" style="display: inline-block;">
+      <img src="https://framerusercontent.com/images/uB1AWiA6HkyTs5iUu7VSs7YdsfA.png?scale-down-to=512&width=1549&height=640" alt="Dots" style="height: 28px; width: auto; display: block;"/>
+     </a>
+    </div>    <div class="nav-links">
       <span>Product</span>
       <span>Solutions ▾</span>
       <span>Integrations</span>
