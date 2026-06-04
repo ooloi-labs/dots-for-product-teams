@@ -112,7 +112,7 @@
     /* Grids */
     .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
 
     .card { background: #fff; border: 1px solid #e0e0d8; border-radius: 10px; padding: 20px; }
     .card-filled { background: #f5f5f3; border-radius: 10px; padding: 18px; }
@@ -250,7 +250,7 @@
       </div>
       <div class="card-filled">
         <div class="icon-placeholder"></div>
-        <h3>Shallow AI summaries</h3>
+        <h3></h3>
         <p>Quick AI tools generate answers, but not evidence. Without traceability, teams can't trust or validate the findings.</p>
       </div>
       <div class="card-filled">
@@ -282,6 +282,30 @@
       <div class="step"><div class="step-num">2</div><h3>Connect</h3><p>Import feedback from every source.</p></div>
       <div class="step"><div class="step-num">3</div><h3>Understand</h3><p>AI surfaces patterns automatically.</p></div>
       <div class="step"><div class="step-num">4</div><h3>Act</h3><p>Turn insights into reports and roadmaps.</p></div>
+    </div>
+  </section>
+
+  <!-- Who it's for -->
+  <section>
+    <p class="section-label">Who it's for</p>
+    <h2>Built for every role shaping the product</h2>
+    <p style="font-size:14px; color:#666; margin-top:-20px; margin-bottom:28px; line-height:1.6;">Whether you're tracking feature requests, surfacing customer pain points, or discovering new opportunities, Dots helps you find the answers that matter most to you.</p>
+    <div class="grid-2">
+      <div class="persona-card">
+        <p class="persona-label">Product Owners</p>
+        <h3>Stop guessing what users need</h3>
+        <p>Connect feedback across channels to understand what users need, and make roadmap decisions with confidence.</p>
+      </div>
+      <div class="persona-card">
+        <p class="persona-label">UX Researchers</p>
+        <h3>Scale your research without losing rigor</h3>
+        <p> Move from unstrcutured data to trusted insights faster. AI handles first-pass coding. You handle the judgment calls.</p>
+      </div>
+      <div class="persona-card">
+        <p class="persona-label">Customer Success &amp; Support Leaders</p>
+        <h3>Turn customer conversations into product insights</h3>
+        <p>Spot recurring issues, emerging requests, and churn signals across support interactions. Ensure customer feedback influences product decisions.</p>
+      </div>
     </div>
   </section>
 
@@ -320,35 +344,6 @@
           <h3>Stakeholder-ready outputs</h3>
           <p>Go from raw data to slide-ready summaries without an analyst in the loop for every deliverable.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Who it's for -->
-  <section>
-    <p class="section-label">Who it's for</p>
-    <h2>Built for three types of teams.</h2>
-    <p style="font-size:14px; color:#666; margin-top:-20px; margin-bottom:28px; line-height:1.6;">Each role gets what they need — no one's buying a tool meant for someone else.</p>
-    <div class="grid-2">
-      <div class="persona-card">
-        <p class="persona-label">Product &amp; UX</p>
-        <h3>Stop guessing what users mean</h3>
-        <p>Pull together interviews, NPS verbatims, and support tickets in one place. Ask questions across all of it. Ship with evidence, not instinct.</p>
-      </div>
-      <div class="persona-card">
-        <p class="persona-label">Research &amp; Insights</p>
-        <h3>Scale your qual without scaling headcount</h3>
-        <p>Run large-scale studies across geographies. AI handles first-pass coding. You handle the judgment calls.</p>
-      </div>
-      <div class="persona-card">
-        <p class="persona-label">Customer Success</p>
-        <h3>Turn support signals into product signals</h3>
-        <p>Surface recurring pain points from tickets and calls before they become churn. Close the loop between CS and product.</p>
-      </div>
-      <div class="persona-card">
-        <p class="persona-label">Ops &amp; Strategy</p>
-        <h3>Turn distributed data into a shared view</h3>
-        <p>Standardize how qualitative evidence flows across teams, regions, and reporting periods — so decision-makers aren't flying blind.</p>
       </div>
     </div>
   </section>
