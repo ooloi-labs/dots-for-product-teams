@@ -1,3 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dots — For Product Owners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+  :root {
+    /* Colors — matched to reference_format.html palette */
+    --color-background-primary:   #FFFFFF;
+    --color-background-secondary: #F9F9F9;
+    --color-background-info:      #DCFCE7;
+
+    --color-text-primary:   #0D0D0D;
+    --color-text-secondary: #6B7280;
+    --color-text-tertiary:  #9CA3AF;
+    --color-text-info:      #16A34A;
+
+    --color-border-secondary: #D1D5DB;
+    --color-border-tertiary:  #E5E7EB;
+
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+  }
+
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--color-background-primary);
+    -webkit-font-smoothing: antialiased;
+  }
+</style>
+</head>
+<body>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
@@ -637,6 +673,106 @@
     margin-left: 6px;
     vertical-align: middle;
   }
+
+  /* PROBLEM */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .problem-card {
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 18px;
+  }
+  .problem-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--color-text-primary);
+  }
+  .problem-card p {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+
+  /* SOLUTION */
+  .solution-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .solution-card {
+    background: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 18px;
+  }
+  .solution-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--color-text-primary);
+  }
+  .solution-card p {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+
+  /* PRICING */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .pricing-card {
+    background: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 20px;
+    position: relative;
+  }
+  .pricing-card.featured {
+    border: 1.5px solid var(--color-text-primary);
+  }
+  .pricing-card .plan-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    margin-bottom: 8px;
+  }
+  .pricing-card .price {
+    font-size: 26px;
+    font-weight: 500;
+    font-family: 'DM Serif Display', serif;
+    color: var(--color-text-primary);
+    margin-bottom: 6px;
+  }
+  .pricing-card .price span {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--color-text-tertiary);
+  }
+  .pricing-card .desc {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    line-height: 1.55;
+  }
+  .badge-popular {
+    position: absolute;
+    top: -11px;
+    left: 16px;
+    background: var(--color-text-primary);
+    color: var(--color-background-primary);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 100px;
+  }
 </style>
 
 <div class="hp">
@@ -688,6 +824,57 @@
 
     <div style="margin-top: 18px;">
       <div class="section-label">↓ scroll for the full picture</div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">The problem</div>
+      <h2>PMs know when usage drops. They never know why.</h2>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="outcome-icon"><i class="ti ti-layout-distribute-horizontal" aria-hidden="true"></i></div>
+        <h3>Scattered feedback</h3>
+        <p>NPS, reviews, interviews, support logs — all in different places.</p>
+      </div>
+      <div class="problem-card">
+        <div class="outcome-icon"><i class="ti ti-sparkles" aria-hidden="true"></i></div>
+        <h3>Shallow AI summaries</h3>
+        <p>Quick AI tools miss the nuance. Analysis lacks rigor.</p>
+      </div>
+      <div class="problem-card">
+        <div class="outcome-icon"><i class="ti ti-hourglass" aria-hidden="true"></i></div>
+        <h3>Time-consuming</h3>
+        <p>Finding signal in the noise takes days, not minutes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">What Dots does</div>
+      <h2>Deep AI intelligence, not just summaries.</h2>
+    </div>
+    <div class="solution-grid">
+      <div class="solution-card">
+        <h3>All voices in one place</h3>
+        <p>Every feedback channel connected. The what and the why, together.</p>
+      </div>
+      <div class="solution-card">
+        <h3>Multi-lens AI analysis</h3>
+        <p>Surfaces patterns from multiple angles. Adapts to your industry and users.</p>
+      </div>
+      <div class="solution-card">
+        <h3>Traceable insights</h3>
+        <p>Every insight links back to real customer voices. Defend your decisions.</p>
+      </div>
+      <div class="solution-card">
+        <h3>Shared across teams</h3>
+        <p>Everyone sees the same insights. Understanding scales with your team.</p>
+      </div>
     </div>
   </section>
 
@@ -964,6 +1151,32 @@
     </div>
   </section>
 
+  <!-- PRICING -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">Pricing</div>
+      <h2>Simple, usage-based pricing.</h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <p class="plan-name">Monthly</p>
+        <p class="price">$550<span>/mo</span></p>
+        <p class="desc">5 users. Best for project-based studies.</p>
+      </div>
+      <div class="pricing-card featured">
+        <div class="badge-popular">Most popular</div>
+        <p class="plan-name">Pro</p>
+        <p class="price">$9,000<span>/yr</span></p>
+        <p class="desc">15 users. Best for multi-team adoption.</p>
+      </div>
+      <div class="pricing-card">
+        <p class="plan-name">Enterprise</p>
+        <p class="price">Custom</p>
+        <p class="desc">100+ users. Built for org-wide adoption.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- 11. FINAL CTA -->
   <section class="final-cta">
     <h2>Start with one project.<br>See the difference in a week.</h2>
@@ -1016,3 +1229,5 @@
   </footer>
 
 </div>
+</body>
+</html>
