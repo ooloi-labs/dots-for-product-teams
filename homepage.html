@@ -5,209 +5,246 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dots — For Product Owners</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     
     :root {
-    --bg: #FFFFFF;
-    --surface: var(--bg);
-    --surface-subtle: #F9F9F9;
-    --border: #E5E7EB;
-    --border-md: #D1D5DB;
-    --text: #0D0D0D;
-    --text2: #6B7280;
-    --text3: #9CA3AF;
-    --accent: #22C55E;
-    /*--accent-light: #F0F0EE;
-    --accent-dark: #000000;*/
-    --accent-bg: #DCFCE7;
-    --accent-text: #16A34A;
-    --tag-bg: #EFEFED;
-    --tag-text: #2A2A2A;
-    --warn-bg: #F5F5F3;
-    --warn-text: #5A5A5A;
-    /*--dark-bg: #111111;*/
-    --radius: 12px;
-    --radius-lg: 16px;
-    --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-    --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04);
+      --bg: #FFFFFF;
+      --surface-subtle: #F9F9F9;
+      --border: #E5E7EB;
+      --border-md: #D1D5DB;
+      --text: #0D0D0D;
+      --text2: #6B7280;
+      --text3: #9CA3AF;
+      --accent: #22C55E;
+      --accent-bg: #DCFCE7;
+      --accent-text: #16A34A;
+      --radius: 12px;
+      --radius-lg: 16px;
     }
     
     body {
-    font-family: 'DM Sans', -apple-system, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    font-size: 15px;
-    line-height: 1.6;
-    min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-    }
-    
-    .page {
-      max-width: 100%;
-      margin: 0 auto;
-      padding: 0 0 100px;
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .content-wrap {
-      max-width: 1060px;
-      margin: 0 auto;
-    }
-
-    /* Nav */
+    /* Nav — full width, content constrained */
     nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      display: flex; align-items: center; justify-content: space-between;
       padding: 14px 32px;
-      border-bottom: 1px solid #e0e0d8;
+      border-bottom: 0.5px solid var(--border);
       width: 100%;
+      position: sticky; top: 0; background: var(--bg); z-index: 10;
     }
     .nav-logo { display: flex; align-items: center; gap: 8px; }
-    .nav-logo span { font-size: 15px; font-weight: 500; }
     .nav-links { display: flex; gap: 28px; }
     .nav-links span { font-size: 13px; color: #666; cursor: pointer; }
     .btn-primary {
       background: #111; color: #fff; font-size: 13px;
-      padding: 8px 16px; border-radius: 8px; cursor: pointer; display: inline-block;
+      padding: 8px 16px; border-radius: 8px; cursor: pointer; display: inline-block; font-weight: 500;
     }
     .btn-secondary {
       border: 1px solid #ccc; color: #555; font-size: 14px;
       padding: 10px 22px; border-radius: 8px; cursor: pointer; display: inline-block;
     }
 
-    /* Sections */
-    section { padding: 56px 32px; border-bottom: 1px solid #e0e0d8; max-width: 1060px; margin: 0 auto; }
+    /* Sections — all constrained to 1060px */
+    section { padding: 64px 32px; border-bottom: 0.5px solid var(--border); max-width: 1060px; margin: 0 auto; }
+
     .section-label {
-      font-size: 11px; color: #999; text-transform: uppercase;
-      letter-spacing: 0.08em; margin-bottom: 12px;
+      font-size: 11px; color: var(--text3); text-transform: uppercase;
+      letter-spacing: 0.1em; margin-bottom: 10px; font-weight: 500;
     }
-     h1 { 
-    font-family: 'DM Sans', sans-serif; 
-    color: var(--text);
-    font-size: 40px;
-    font-weight: 800;
-    letter-spacing: -0.8px;
-    line-height: 1.15;
-    margin-bottom: 16px;
-     }
-    h2 { font-size: 24px; font-weight: 500; line-height: 1.3; margin-bottom: 32px; max-width: 1060px; }
-  .subtitle { font-size: 15px; color: var(--text2); line-height: 1.6; max-width: 520px; margin: 0 auto 28px; text-align: center; }
+    h1 {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text); font-size: 40px; font-weight: 800;
+      letter-spacing: -0.8px; line-height: 1.15; margin-bottom: 16px;
+    }
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px; font-weight: 400; line-height: 1.25; margin-bottom: 32px;
+    }
+    .subtitle {
+      font-size: 15px; color: var(--text2); line-height: 1.6;
+      max-width: 520px; margin: 0 auto 28px; text-align: center;
+    }
 
-    /* Hero */
-    .hero { text-align: center; }
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      background: #fff;
+      max-width: 100%; padding: 72px 32px 64px; border-bottom: 0.5px solid var(--border);
+      position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('https://framerusercontent.com/images/uB1AWiA6HkyTs5iUu7VSs7YdsfA.png');
+      background-size: cover; background-position: center;
+      opacity: 0;
+    }
+    .hero-gradient {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(167,243,208,0.45) 0%, rgba(186,230,253,0.35) 30%, rgba(249,168,212,0.2) 60%, rgba(255,255,255,0) 100%);
+      pointer-events: none;
+    }
+    .hero > * { position: relative; z-index: 1; }
+    .hero h1 { color: var(--text); }
+    .hero .subtitle { color: var(--text2); }
     .hero-badge {
-      display: inline-block; font-size: 12px; border: 1px solid #ddd;
-      border-radius: 999px; padding: 4px 14px; color: #666; margin-bottom: 24px;
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; border: 0.5px solid var(--border-md);
+      border-radius: 999px; padding: 4px 14px; color: var(--text2); margin-bottom: 24px;
+      background: rgba(255,255,255,0.7);
     }
-    .hero-ctas { display: flex; gap: 12px; justify-content: center; }
-    .screenshot-placeholder {
-      margin-top: 40px; background: #f5f5f3; border: 1px solid #e0e0d8;
-      border-radius: 12px; height: 220px; display: flex;
-      align-items: center; justify-content: center; color: #aaa; font-size: 13px;
+    .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+    .hero-ctas { display: flex; gap: 12px; justify-content: center; margin-bottom: 48px; }
+    .btn-hero-primary {
+      background: var(--text); color: #fff; font-size: 14px;
+      padding: 11px 24px; border-radius: 8px; cursor: pointer; font-weight: 600; display: inline-block;
+    }
+    .btn-hero-secondary {
+      border: 0.5px solid var(--border-md); color: var(--text); font-size: 14px;
+      padding: 11px 22px; border-radius: 8px; cursor: pointer; display: inline-block; background: rgba(255,255,255,0.6);
+    }
+    .hero-video-wrap {
+      position: relative; width: 100%; height: 0; padding-top: 47.6563%;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.1); overflow: hidden;
+      border-radius: 10px; will-change: transform; border: 0.5px solid var(--border);
+    }
+    .hero-video-wrap iframe {
+      position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none;
     }
 
-    /* Grids */
-    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
-
-    .card { background: #fff; border: 1px solid #e0e0d8; border-radius: 10px; padding: 20px; }
-    .card-filled { background: #f5f5f3; border-radius: 10px; padding: 18px; }
-    .card h3, .card-filled h3 { font-size: 13px; font-weight: 500; margin-bottom: 6px; }
-    .card p, .card-filled p { font-size: 12px; color: #666; line-height: 1.55; }
-
-    .icon-placeholder { width: 28px; height: 28px; background: #ddd; border-radius: 6px; margin-bottom: 12px; }
-    .icon-circle {
-      width: 36px; height: 36px; background: #f0efea; border-radius: 50%;
+    /* ── PROBLEM — dark section ── */
+    .problem-section {
+      background: #111; color: #fff;
+      max-width: 100%; padding: 64px 32px; border-bottom: none;
+    }
+    .problem-inner { max-width: 1060px; margin: 0 auto; }
+    .problem-section .section-label { color: rgba(255,255,255,0.35); }
+    .problem-section h2 { color: #fff; }
+    .problem-card {
+      background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg); padding: 20px;
+    }
+    .problem-card h3 { font-size: 14px; font-weight: 500; margin-bottom: 6px; color: #fff; }
+    .problem-card p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+    .problem-icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: rgba(34,197,94,0.15); border: 0.5px solid rgba(34,197,94,0.3);
       display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
     }
-    .icon-circle svg {
-      width: 16px; height: 16px; stroke: #555; fill: none;
-      stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+    .problem-icon svg { width: 15px; height: 15px; stroke: var(--accent); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ── SOLUTION ── */
+    .card { background: #fff; border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 20px; }
+    .card h3 { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
+    .card p { font-size: 13px; color: var(--text2); line-height: 1.55; }
+    .card .accent-icon {
+      width: 28px; height: 28px; border-radius: 8px;
+      background: var(--accent-bg); display: flex; align-items: center; justify-content: center; margin-bottom: 12px;
     }
+    .card .accent-icon svg { width: 14px; height: 14px; stroke: var(--accent-text); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 
-    /* How it works */
-    .how-section { background: #f5f5f3; }
-    .step { text-align: center; }
-    .step-num {
-      width: 32px; height: 32px; border: 1px solid #ccc; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 12px; font-size: 13px; color: #666;
+    /* ── HOW IT WORKS — light grey ── */
+    .how-section { background: var(--surface-subtle); max-width: 100%; padding: 64px 32px; border-bottom: 0.5px solid var(--border); }
+    .how-inner { max-width: 1060px; margin: 0 auto; }
+    .steps-row {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 0; border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden;
+      margin-bottom: 32px;
     }
-    .step h3 { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
-    .step p { font-size: 11px; color: #777; line-height: 1.5; }
+    .step { padding: 20px 18px; border-right: 0.5px solid var(--border); background: var(--bg); }
+    .step:last-child { border-right: none; }
+    .step-num { font-size: 11px; color: var(--text3); margin-bottom: 8px; }
+    .step h3 { font-size: 14px; font-weight: 500; margin-bottom: 5px; }
+    .step p { font-size: 12px; color: var(--text2); line-height: 1.5; }
 
-    /* What you'll get — bordered grid */
-    .benefits-grid { border: 1px solid #e0e0d8; border-radius: 10px; overflow: hidden; }
-    .benefit-cell { padding: 24px; }
-    .benefit-cell h3 { font-size: 14px; font-weight: 500; margin-bottom: 8px; }
-    .benefit-cell p { font-size: 12px; color: #666; line-height: 1.6; }
-
-    /* Who it's for */
-    .persona-card { border: 1px solid #e0e0d8; border-radius: 10px; padding: 20px; }
-    .persona-label { font-size: 10px; color: #999; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
-    .persona-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 8px; line-height: 1.3; }
-    .persona-card p { font-size: 12px; color: #666; line-height: 1.6; }
-
-    /* Data flow */
-    .data-flow { background: #f5f5f3; border-radius: 10px; padding: 28px 24px; }
-    .data-flow-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    /* Integrations nested inside How it works */
+    .integrations-label { font-size: 12px; color: var(--text3); text-align: center; margin-bottom: 14px; letter-spacing: 0.04em; }
+    .data-flow { background: #fff; border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 24px; }
+    .data-flow-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; justify-content: center; }
     .data-tag {
-      display: flex; align-items: center; gap: 6px; border: 1px solid #ddd;
-      border-radius: 999px; padding: 6px 14px; font-size: 12px; background: #fff; color: #333;
+      display: flex; align-items: center; gap: 6px; border: 0.5px solid var(--border-md);
+      border-radius: 999px; padding: 5px 12px; font-size: 12px; background: var(--surface-subtle); color: #333;
     }
-    .data-tag-icon { width: 14px; height: 14px; background: #ccc; border-radius: 3px; flex-shrink: 0; }
-    .data-tag.coming-soon { opacity: 0.45; }
-    .coming-soon-label { font-size: 10px; color: #999; margin-left: 2px; }
-    .data-divider { display: flex; align-items: center; gap: 12px; margin: 4px 0 20px; }
-    .data-divider-line { flex: 1; height: 1px; background: #ddd; }
+    .data-tag-icon { width: 12px; height: 12px; background: #ccc; border-radius: 2px; flex-shrink: 0; }
+    .data-tag.coming-soon { opacity: 0.4; }
+    .coming-soon-label { font-size: 10px; color: #999; }
+    .data-divider { display: flex; align-items: center; gap: 12px; margin: 4px 0 18px; }
+    .data-divider-line { flex: 1; height: 0.5px; background: var(--border-md); }
     .data-divider-dot {
       background: #111; color: #fff; font-size: 13px; font-weight: 500;
-      padding: 7px 18px; border-radius: 999px;
+      padding: 6px 18px; border-radius: 999px; font-family: 'DM Serif Display', serif;
     }
+    .output-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
     .output-tag {
-      border: 1px solid #ddd; border-radius: 999px;
-      padding: 6px 16px; font-size: 12px; background: #fff; color: #333;
+      border: 0.5px solid var(--accent); border-radius: 999px;
+      padding: 5px 14px; font-size: 12px; background: var(--accent-bg); color: var(--accent-text); font-weight: 500;
     }
 
-    /* Pricing */
-    .pricing-card { border: 1px solid #e0e0d8; border-radius: 12px; padding: 22px; background: #fff; position: relative; }
-    .pricing-card.featured { border: 2px solid #111; }
-    .pricing-card .plan-name { font-size: 13px; font-weight: 500; margin-bottom: 6px; }
-    .pricing-card .price { font-size: 24px; font-weight: 500; margin-bottom: 4px; }
-    .pricing-card .price span { font-size: 13px; font-weight: 400; color: #888; }
-    .pricing-card .desc { font-size: 12px; color: #666; line-height: 1.55; }
-    .badge-popular {
-      position: absolute; top: -11px; left: 16px;
-      background: #111; color: #fff; font-size: 11px; padding: 2px 12px; border-radius: 999px;
-    }
+    /* ── WHO IT'S FOR ── */
+    .persona-card { border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 22px; background: var(--bg); }
+    .persona-label { font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; font-weight: 500; }
+    .persona-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 8px; line-height: 1.3; }
+    .persona-card p { font-size: 13px; color: var(--text2); line-height: 1.6; }
 
-    /* CTA */
-    .cta-section { text-align: center; padding: 64px 32px; }
-    .cta-section h2 { font-size: 28px; max-width: 480px; margin: 0 auto 10px; font-weight: 500; }
-    .cta-section .tagline { font-size: 16px; color: #666; margin-bottom: 28px; }
-
-    /* Footer */
-    .footer {
-      padding: 20px 32px; border-top: 1px solid #e0e0d8;
-      display: flex; align-items: center; justify-content: space-between; background: #fafaf8;
-      max-width: 1060px; margin: 0 auto;
+    /* ── WHAT YOU'LL GET ── */
+    .benefits-grid { border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+    .benefit-cell { padding: 24px; }
+    .benefit-cell h3 { font-size: 14px; font-weight: 500; margin-bottom: 8px; }
+    .benefit-cell p { font-size: 13px; color: var(--text2); line-height: 1.6; }
+    .icon-circle {
+      width: 32px; height: 32px; background: var(--accent-bg); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
     }
-    .footer span { font-size: 12px; color: #999; }
+    .icon-circle svg { width: 15px; height: 15px; stroke: var(--accent-text); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ── CTA — dark ── */
+    .cta-section {
+      text-align: center; padding: 80px 32px;
+      background: #0D0D0D; color: #fff; max-width: 100%; border-bottom: none;
+    }
+    .cta-section h2 { color: #fff; font-size: 32px; max-width: 500px; margin: 0 auto 12px; }
+    .cta-section .tagline { font-size: 16px; color: rgba(255,255,255,0.5); margin-bottom: 32px; }
+
+    /* ── GRIDS ── */
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 640px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+    @media (min-width: 641px) and (max-width: 860px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) { .steps-row { grid-template-columns: repeat(2, 1fr); } .steps-row .step:nth-child(2) { border-right: none; } .steps-row .step:nth-child(-n+2) { border-bottom: 0.5px solid var(--border); } }
+
+    /* ── FOOTER ── */
+    .footer { padding: 40px 32px 28px; background: var(--surface-subtle); max-width: 1060px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+    .footer-logo { font-family: 'DM Serif Display', serif; font-size: 17px; margin-bottom: 8px; }
+    .footer-tagline { font-size: 12px; color: var(--text2); line-height: 1.6; max-width: 220px; }
+    .footer-col h4 { font-size: 11px; font-weight: 500; color: var(--text2); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.07em; }
+    .footer-col a { display: block; font-size: 13px; color: var(--text2); text-decoration: none; margin-bottom: 7px; line-height: 1.4; }
+    .footer-col a:hover { color: var(--text); }
+    .footer-bottom { border-top: 0.5px solid var(--border); padding-top: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .footer-bottom-left { font-size: 12px; color: var(--text3); }
+    .footer-bottom-right { display: flex; gap: 16px; }
+    .footer-bottom-right a { font-size: 12px; color: var(--text3); text-decoration: none; }
+    @media (max-width: 640px) { .footer-top { grid-template-columns: 1fr 1fr; } }
   </style>
 </head>
 <body>
-<div class="page">
 
   <!-- Nav -->
   <nav>
     <div class="nav-logo">
-     <a href="https://getdots.in" target="_blank" rel="noopener noreferrer" style="display: inline-block;">
-      <img src="https://framerusercontent.com/images/uB1AWiA6HkyTs5iUu7VSs7YdsfA.png?scale-down-to=512&width=1549&height=640" alt="Dots" style="height: 28px; width: auto; display: block;"/>
-     </a>
+      <a href="https://getdots.in" target="_blank" rel="noopener noreferrer" style="display:inline-block;">
+        <img src="https://framerusercontent.com/images/uB1AWiA6HkyTs5iUu7VSs7YdsfA.png?scale-down-to=512&width=1549&height=640" alt="Dots" style="height:28px;width:auto;display:block;"/>
+      </a>
     </div>
     <div class="nav-links">
       <span>Product</span>
@@ -218,66 +255,126 @@
     <div class="btn-primary">Get a demo</div>
   </nav>
 
-  <!-- Hero -->
+  <!-- 1. HERO — soft gradient -->
   <section class="hero">
-    <div class="hero-badge">AI-powered product insights</div>
+    <div class="hero-gradient"></div>
+    <div class="hero-badge"><span class="hero-badge-dot"></span>AI-powered product insights</div>
     <h1>Product decisions deserve better than guesswork.<br>Build on user evidence.</h1>
     <p class="subtitle">Stop losing weeks to scattered feedback and manual analysis. Turn user signals into traceable insights your team can trust.</p>
-    <div class="hero-ctas" style="margin-bottom: 40px;">
-      <div class="btn-primary" style="font-size:14px; padding: 11px 24px;">Book a demo</div>
-      <div class="btn-secondary">See how it works</div>
+    <div class="hero-ctas">
+      <div class="btn-hero-primary">Book a demo</div>
+      <div class="btn-hero-secondary">See how it works</div>
     </div>
-    <div style="position: relative; width: 100%; height: 0; padding-top: 47.6563%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
-      <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
-        src="https://www.canva.com/design/DAHLU-dXZc4/bw66v52MsO3BvzBTuSqGhg/watch?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-      </iframe>
+    <div class="hero-video-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHLU-dXZc4/bw66v52MsO3BvzBTuSqGhg/watch?embed" allowfullscreen allow="fullscreen"></iframe>
     </div>
   </section>
 
-  <!-- Problem -->
-  <section>
-    <p class="section-label">The problem</p>
-    <h2>Product teams know when metrics change. But they don't know why</h2>
-    <div class="grid-4">
-      <div class="card-filled">
-        <div class="icon-placeholder"></div>
-        <h3>Scattered user signals</h3>
-        <p>App store reviews, support tickets, NPS responses, and interview recordings all live in different tools, making analysis nearly impossible.</p>
+  <!-- 2. PROBLEM — dark contrast -->
+  <div class="problem-section">
+    <div class="problem-inner">
+      <p class="section-label">The problem</p>
+      <h2>Product teams know when metrics change. But they don't know why.</h2>
+      <div class="grid-2">
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 3h7v7H3z"/><path d="M14 3h7v7h-7z"/><path d="M3 14h7v7H3z"/><path d="M14 17h7M17.5 14v7"/></svg>
+          </div>
+          <h3>Scattered user signals</h3>
+          <p>App store reviews, support tickets, NPS responses, and interview recordings all live in different tools, making analysis nearly impossible.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3>Analysis Paralysis</h3>
+          <p>Turning thousands of conversations into usable insights takes weeks or months of manual work. Decisions get delayed while teams search for answers.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <h3>Shallow AI outputs</h3>
+          <p>Quick AI tools generate answers, but not evidence. Without traceability, teams can't trust or validate the findings.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3>Organizational blind spots</h3>
+          <p>Insights stay buried across time periods, different teams, and geographies, making it difficult to identify larger patterns.</p>
+        </div>
       </div>
-        <div class="card-filled">
-        <div class="icon-placeholder"></div>
-        <h3>Analysis Paralysis</h3>
-        <p>Turning thousands of conversations into usable insights takes weeks or months of manual work. Decisions get delayed while teams search for answers.</p>
-      </div>
-      <div class="card-filled">
-        <div class="icon-placeholder"></div>
-        <h3>Shallow AI outputs</h3>
-        <p>Quick AI tools generate answers, but not evidence. Without traceability, teams can't trust or validate the findings.</p>
-      </div>
-      <div class="card-filled">
-        <div class="icon-placeholder"></div>
-        <h3>Organizational Blind spots</h3>
-        <p>Insights stay buried across time periods, different teams, and geographies, making it difficult to identify larger patterns.</p>
-      </div>
-  </section>
+    </div>
+  </div>
 
-  <!-- Solution -->
+  <!-- 3. SOLUTION -->
   <section>
     <p class="section-label">What Dots does</p>
     <h2>Deep AI intelligence, not just summaries.</h2>
     <div class="grid-2">
-      <div class="card"><h3>All voices in one place</h3><p>Every feedback channel connected. The what and the why, together.</p></div>
-      <div class="card"><h3>Multi-lens AI analysis</h3><p>Surfaces patterns from multiple angles. Adapts to your industry and users.</p></div>
-      <div class="card"><h3>Traceable insights</h3><p>Every insight links back to real customer voices. Defend your decisions.</p></div>
-      <div class="card"><h3>Shared across teams</h3><p>Everyone sees the same insights. Understanding scales with your team.</p></div>
+      <div class="card">
+        <div class="accent-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>All voices in one place</h3><p>Every feedback channel connected. The what and the why, together.</p>
+      </div>
+      <div class="card">
+        <div class="accent-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3>Multi-lens AI analysis</h3><p>Surfaces patterns from multiple angles. Adapts to your industry and users.</p>
+      </div>
+      <div class="card">
+        <div class="accent-icon"><svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3>Traceable insights</h3><p>Every insight links back to real customer voices. Defend your decisions.</p>
+      </div>
+      <div class="card">
+        <div class="accent-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+        <h3>Shared across teams</h3><p>Everyone sees the same insights. Understanding scales with your team.</p>
+      </div>
     </div>
   </section>
 
-   <!-- Who it's for -->
+  <!-- 4. HOW IT WORKS + INTEGRATIONS — light grey -->
+  <div class="how-section">
+    <div class="how-inner">
+      <p class="section-label">How it works</p>
+      <h2>Four steps from data to decision.</h2>
+      <div class="steps-row">
+        <div class="step"><div class="step-num">01</div><h3>Add Context</h3><p>Tell Dots about your product, users, and goals so insights are grounded in your context.</p></div>
+        <div class="step"><div class="step-num">02</div><h3>Bring your data together</h3><p>Connect interviews, support tickets, reviews, surveys, and other user feedback in one place.</p></div>
+        <div class="step"><div class="step-num">03</div><h3>Understand what users are saying</h3><p>Dots surfaces patterns, themes, sentiment shifts, and emerging issues across your data.</p></div>
+        <div class="step"><div class="step-num">04</div><h3>Act with confidence</h3><p>Explore the evidence, align stakeholders, and make decisions you can defend.</p></div>
+      </div>
+      <p class="integrations-label">Connects with your existing stack — no migration required</p>
+      <div class="data-flow">
+        <div class="data-flow-row">
+          <div class="data-tag"><div class="data-tag-icon"></div> Transcripts</div>
+          <div class="data-tag"><div class="data-tag-icon"></div> Fathom</div>
+          <div class="data-tag"><div class="data-tag-icon"></div> Zendesk</div>
+          <div class="data-tag"><div class="data-tag-icon"></div> Slack</div>
+          <div class="data-tag"><div class="data-tag-icon"></div> NPS &amp; CSAT</div>
+          <div class="data-tag"><div class="data-tag-icon"></div> App store reviews</div>
+          <div class="data-tag coming-soon"><div class="data-tag-icon"></div> Mixpanel <span class="coming-soon-label">soon</span></div>
+          <div class="data-tag coming-soon"><div class="data-tag-icon"></div> Amplitude <span class="coming-soon-label">soon</span></div>
+        </div>
+        <div class="data-divider">
+          <div class="data-divider-line"></div>
+          <div class="data-divider-dot">Dots</div>
+          <div class="data-divider-line"></div>
+        </div>
+        <div class="output-row">
+          <div class="output-tag">Synthesized themes</div>
+          <div class="output-tag">Evidence repositories</div>
+          <div class="output-tag">Stakeholder reports</div>
+          <div class="output-tag">Decision briefs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. WHO IT'S FOR -->
   <section>
     <p class="section-label">Who it's for</p>
-    <h2>Built for every role shaping the product</h2>
-    <p style="font-size:14px; color:#666; margin-top:-20px; margin-bottom:28px; line-height:1.6;">Whether you're tracking feature requests, surfacing customer pain points, or discovering new opportunities, Dots helps you find the answers that matter most to you.</p>
+    <h2>Built for every role shaping the product.</h2>
+    <p style="font-size:14px;color:var(--text2);margin-top:-20px;margin-bottom:28px;line-height:1.6;">Whether you're tracking feature requests, surfacing customer pain points, or discovering new opportunities, Dots helps you find the answers that matter most to you.</p>
     <div class="grid-3">
       <div class="persona-card">
         <p class="persona-label">Product Owners</p>
@@ -287,7 +384,7 @@
       <div class="persona-card">
         <p class="persona-label">UX Researchers</p>
         <h3>Scale your research without losing rigor</h3>
-        <p> Move from unstructured data to trusted insights faster. AI handles first-pass coding. You handle the judgment calls.</p>
+        <p>Move from unstructured data to trusted insights faster. AI handles first-pass coding. You handle the judgment calls.</p>
       </div>
       <div class="persona-card">
         <p class="persona-label">Customer Success &amp; Support Leaders</p>
@@ -297,81 +394,30 @@
     </div>
   </section>
 
-  <!-- How it works -->
-  <section class="how-section">
-    <p class="section-label">How it works</p>
-    <h2>Four steps from data to decision</h2>
-    <div class="grid-4">
-      <div class="step"><div class="step-num">1</div><h3>Add Context</h3><p>Tell Dots about your product, users, and goals so insights are grounded in your context.</p></div>
-      <div class="step"><div class="step-num">2</div><h3>Bring your data together</h3><p>Connect interviews, support tickets, reviews, surveys, and other user feedback in one place.</p></div>
-      <div class="step"><div class="step-num">3</div><h3>Understand what users are saying</h3><p>Dots surfaces patterns, themes, sentiment shifts, and emerging issues across your data.</p></div>
-      <div class="step"><div class="step-num">4</div><h3>Act with confidence</h3><p>Explore the evidence behind every finding, align stakeholders, and make decisions with confidence.</p></div>
-    </div>
-  </section>
-
-   <!-- Data in, decisions out -->
-  <section>
-    <p class="section-label">Your existing stack, connected</p>
-    <h2>Data in. Decisions out.<br>Dots fits where you already work.</h2>
-    <p style="font-size:14px; color:#666; margin-top:-20px; margin-bottom:28px; line-height:1.6;">Bring in data from your existing tools — no migration required. Dots normalizes it, links it, and makes it queryable.</p>
-    <div class="data-flow">
-      <div class="data-flow-row">
-        <div class="data-tag"><div class="data-tag-icon"></div> Transcripts</div>
-        <div class="data-tag"><div class="data-tag-icon"></div> Fathom</div>
-        <div class="data-tag"><div class="data-tag-icon"></div> Zendesk</div>
-        <div class="data-tag"><div class="data-tag-icon"></div> Slack</div>
-        <div class="data-tag"><div class="data-tag-icon"></div> NPS &amp; CSAT</div>
-        <div class="data-tag"><div class="data-tag-icon"></div> App store reviews</div>
-        <div class="data-tag coming-soon"><div class="data-tag-icon"></div> Mixpanel <span class="coming-soon-label">soon</span></div>
-        <div class="data-tag coming-soon"><div class="data-tag-icon"></div> Amplitude <span class="coming-soon-label">soon</span></div>
-      </div>
-      <div class="data-divider">
-        <div class="data-divider-line"></div>
-        <div class="data-divider-dot">Dots</div>
-        <div class="data-divider-line"></div>
-      </div>
-      <div class="data-flow-row">
-        <div class="output-tag">Synthesized themes</div>
-        <div class="output-tag">Evidence repositories</div>
-        <div class="output-tag">Stakeholder reports</div>
-        <div class="output-tag">Decision briefs</div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- What you'll get -->
+  <!-- 6. WHAT YOU'LL GET -->
   <section>
     <p class="section-label">Why teams switch to Dots</p>
     <h2>What you'll actually get.</h2>
-    <p style="font-size:14px; color:#666; margin-top:-20px; margin-bottom:28px; line-height:1.6;">Four things PMs and research leads tell us changed after moving to Dots.</p>
+    <p style="font-size:14px;color:var(--text2);margin-top:-20px;margin-bottom:28px;line-height:1.6;">Four things PMs and research leads tell us changed after moving to Dots.</p>
     <div class="benefits-grid">
       <div class="grid-2" style="gap:0;">
-        <div class="benefit-cell" style="border-right:1px solid #e0e0d8; border-bottom:1px solid #e0e0d8;">
-          <div class="icon-circle">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
+        <div class="benefit-cell" style="border-right:0.5px solid var(--border);border-bottom:0.5px solid var(--border);">
+          <div class="icon-circle"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
           <h3>Reports in hours, not weeks</h3>
           <p>Stop manually coding transcripts or hunting across Notion, Drive, and email. Synthesis that used to take 2 weeks takes a day.</p>
         </div>
-        <div class="benefit-cell" style="border-bottom:1px solid #e0e0d8;">
-          <div class="icon-circle">
-            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
+        <div class="benefit-cell" style="border-bottom:0.5px solid var(--border);">
+          <div class="icon-circle"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
           <h3>Cross-project pattern recognition</h3>
           <p>See themes emerging across 10 studies or 5 geographies at once — not just what your last sprint uncovered.</p>
         </div>
-        <div class="benefit-cell" style="border-right:1px solid #e0e0d8;">
-          <div class="icon-circle">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
+        <div class="benefit-cell" style="border-right:0.5px solid var(--border);">
+          <div class="icon-circle"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
           <h3>No more insight silos</h3>
           <p>PMs, program leads, and external partners work from the same repository. No more "can you forward that transcript?" emails.</p>
         </div>
         <div class="benefit-cell">
-          <div class="icon-circle">
-            <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-          </div>
+          <div class="icon-circle"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
           <h3>Stakeholder-ready outputs</h3>
           <p>Go from raw data to slide-ready summaries without an analyst in the loop for every deliverable.</p>
         </div>
@@ -379,24 +425,52 @@
     </div>
   </section>
 
- 
-  <!-- CTA -->
-  <section class="cta-section">
+  <!-- 7. CTA — dark -->
+  <div class="cta-section">
     <h2>What if every PM had a dedicated research team?</h2>
     <p class="tagline">That's Dots.</p>
-    <div class="btn-primary" style="font-size:14px; padding: 12px 28px;">Request a demo</div>
-  </section>
-
-  <!-- Footer -->
-  <div class="footer">
-    <div style="display:flex; align-items:center; gap:8px;">
-      <div style="width:20px; height:20px; background:#111; border-radius:50%;"></div>
-      <span style="font-size:13px; color:#333;">dots</span>
-    </div>
-    <span>© 2026 Dots. All rights reserved.</span>
-    <span>getdots.in</span>
+    <div class="btn-hero-primary" style="display:inline-block;font-size:14px;padding:12px 28px;">Request a demo</div>
   </div>
 
-</div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Dots</div>
+        <div class="footer-tagline">Qualitative insights infrastructure for teams that need to move fast and prove impact.</div>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#">Collect</a>
+        <a href="#">Organize</a>
+        <a href="#">Analyze</a>
+        <a href="#">Integrations</a>
+        <a href="#">Security</a>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="#">For PMs</a>
+        <a href="#">For Research</a>
+        <a href="#">For MEL</a>
+        <a href="#">Enterprise</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">Case studies</a>
+        <a href="#">Pricing</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">© 2026 Dots. All rights reserved.</div>
+      <div class="footer-bottom-right">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of service</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
