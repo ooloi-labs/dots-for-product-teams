@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dots For Product Owners</title>
+  <title>Dots — For Product Owners</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   
@@ -174,25 +174,24 @@
 
     /* ── PROBLEM — soft orange/pink section ── */
     .problem-section {
-      background: #FFF4EE; color: var(--text);
-      max-width: 100%; padding: 64px 0; border-bottom: 0.5px solid #FDDCCC;
+      background: var(--surface-subtle); color: var(--text);
+      max-width: 100%; padding: 64px 0; border-bottom: 0.5px solid var(--border);
     }
     .problem-inner { max-width: 1060px; margin: 0 auto; padding: 0 32px; }
-    .problem-section .section-label { color: #C2410C; }
+    .problem-section .section-label { color: var(--text3); }
     .problem-section h2 { color: var(--text); }
     .problem-card {
-      background: rgba(255,255,255,0.9); border: 1px solid rgba(251,146,60,0.3);
+      background: #fff; border: 0.5px solid var(--border);
       border-radius: var(--radius-lg); padding: 28px;
-      box-shadow: 0 1px 4px rgba(234,88,12,0.06);
     }
-    .problem-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .problem-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 8px; color: var(--text); }
     .problem-card p { font-size: 14px; color: var(--text2); line-height: 1.65; }
     .problem-icon {
       width: 40px; height: 40px; border-radius: 10px;
-      background: rgba(251,146,60,0.15); border: 1px solid rgba(251,146,60,0.4);
+      background: var(--accent-bg); border: 0.5px solid rgba(34,197,94,0.3);
       display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
     }
-    .problem-icon svg { width: 18px; height: 18px; stroke: #EA580C; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .problem-icon svg { width: 18px; height: 18px; stroke: var(--accent-text); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 
     /* ── SOLUTION ── */
     .card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; display: flex; gap: 18px; align-items: flex-start; box-shadow: var(--shadow); }
@@ -215,8 +214,8 @@
     .step { padding: 20px 18px; border-right: 0.5px solid var(--border); background: var(--bg); }
     .step:last-child { border-right: none; }
     .step-num { font-size: 11px; color: var(--text3); margin-bottom: 8px; }
-    .step h3 { font-size: 14px; font-weight: 500; margin-bottom: 5px; }
-    .step p { font-size: 12px; color: var(--text2); line-height: 1.5; }
+    .step h3 { font-size: 15px; font-weight: 500; margin-bottom: 6px; }
+    .step p { font-size: 14px; color: var(--text2); line-height: 1.6; }
 
     /* Integrations nested inside How it works */
     .integrations-label { font-size: 12px; color: var(--text3); text-align: center; margin-bottom: 14px; letter-spacing: 0.04em; }
@@ -245,13 +244,13 @@
     .persona-card { border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 22px; background: var(--bg); }
     .persona-label { font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; font-weight: 500; }
     .persona-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 8px; line-height: 1.3; }
-    .persona-card p { font-size: 13px; color: var(--text2); line-height: 1.6; }
+    .persona-card p { font-size: 14px; color: var(--text2); line-height: 1.6; }
 
     /* ── WHAT YOU'LL GET ── */
     .benefits-grid { border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
     .benefit-cell { padding: 24px; }
-    .benefit-cell h3 { font-size: 14px; font-weight: 500; margin-bottom: 8px; }
-    .benefit-cell p { font-size: 13px; color: var(--text2); line-height: 1.6; }
+    .benefit-cell h3 { font-size: 15px; font-weight: 500; margin-bottom: 8px; }
+    .benefit-cell p { font-size: 14px; color: var(--text2); line-height: 1.6; }
     .icon-circle {
       width: 32px; height: 32px; background: var(--accent-bg); border-radius: 8px;
       display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
@@ -261,16 +260,9 @@
     /* ── CTA — soft orange/pink gradient ── */
     .cta-section {
       text-align: center; padding: 80px 32px;
-      background: #FFF1EB;
-      color: var(--text); max-width: 100%; border-bottom: 0.5px solid #FDDCCC;
-      position: relative; overflow: hidden;
+      background: var(--surface-subtle);
+      color: var(--text); max-width: 100%; border-bottom: 0.5px solid var(--border);
     }
-    .cta-section::before {
-      content: ''; position: absolute; inset: 0;
-      background: rgba(255, 244, 238, 0.55);
-      pointer-events: none;
-    }
-    .cta-section > * { position: relative; z-index: 1; }
     .cta-section h2 { color: var(--text); font-size: 28px; max-width: 760px; margin: 0 auto 12px; white-space: nowrap; }
     .cta-section .tagline { font-size: 16px; color: var(--text2); margin-bottom: 32px; }
 
@@ -305,6 +297,7 @@
         <img src="https://framerusercontent.com/images/uB1AWiA6HkyTs5iUu7VSs7YdsfA.png?scale-down-to=512&width=1549&height=640" alt="Dots" style="height:28px;width:auto;display:block;"/>
       </a>
     </div>
+    <div class="btn-primary">Get a demo</div>
   </nav>
 
   <!-- 1. HERO — soft gradient -->
@@ -313,7 +306,7 @@
     <div class="hero-blob-pink"></div>
     <div class="inner">
       <div class="hero-badge"><span class="hero-badge-dot"></span>AI-powered product insights</div>
-      <h1>Bring user signals to the center of product decisions</h1>
+      <h1>Product decisions deserve better than guesswork.<br>Build on user evidence.</h1>
       <p class="subtitle">Stop losing weeks to scattered feedback and manual analysis. Turn user signals into traceable insights your team can trust.</p>
       <div class="hero-ctas">
         <a href="https://getdots.in/contact" style="text-decoration:none;"><div class="btn-hero-primary">Book a demo</div></a>
@@ -330,7 +323,7 @@
   <!-- 2. PROBLEM — dark contrast -->
   <div class="problem-section">
     <div class="problem-inner">
-      <h2>Your team notices when metrics change. But they don't know why</h2>
+      <h2>Your team notices when metrics change. But they don't know why.</h2>
       <div class="grid-2">
         <div class="problem-card">
           <div class="problem-icon">
@@ -351,14 +344,14 @@
             <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
           </div>
           <h3>Shallow AI outputs</h3>
-          <p>You put your data into an AI tool to speed up the process and get some answers. But without traceability, your team can't trust or validate the findings.</p>
+          <p>You put your data into an AI tool to speed up the process and get some answers, but without traceability, your team can't trust or validate the findings.</p>
         </div>
         <div class="problem-card">
           <div class="problem-icon">
             <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
           </div>
           <h3>Organizational blind spots</h3>
-          <p>Insights remain buried across time periods, teams, and geographies, making it difficult for your organization to identify larger patterns.</p>
+          <p>Insights remain buried across time periods, different teams, and geographies, making it difficult for your organization to identify larger patterns.</p>
         </div>
       </div>
     </div>
@@ -367,7 +360,7 @@
   <!-- 3. SOLUTION / WHY DOTS -->
   <section>
     <div class="inner">
-      <h2>What Dots brings to your team</h2>
+      <h2>What Dots brings to your team.</h2>
 
       <div class="data-flow" style="margin-bottom:32px;">
         <div class="data-flow-row">
@@ -417,7 +410,7 @@
   <!-- 4. HOW IT WORKS — light grey -->
   <div class="how-section">
     <div class="how-inner">
-      <h2>Four steps from data to decision</h2>
+      <h2>Four steps from data to decision.</h2>
       <div class="steps-row">
         <div class="step"><div class="step-num">01</div><h3>Add context</h3><p>Tell Dots about your product, users, and goals so insights are grounded in your context.</p></div>
         <div class="step"><div class="step-num">02</div><h3>Bring your data together</h3><p>Connect interviews, support tickets, reviews, surveys, and other user feedback in one place.</p></div>
@@ -430,7 +423,7 @@
   <!-- 5. WHO IT'S FOR -->
   <section>
     <div class="inner">
-    <h2>Built for every role shaping the product</h2>
+    <h2>Built for every role shaping the product.</h2>
     <p style="font-size:14px;color:var(--text2);margin-top:-20px;margin-bottom:28px;line-height:1.6;">Whether you're tracking feature requests, surfacing customer pain points, or discovering new opportunities, Dots helps you find the answers that matter most to you.</p>
     <div class="grid-3">
       <div class="persona-card">
