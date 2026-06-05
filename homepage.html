@@ -228,13 +228,20 @@
       background: var(--surface-subtle);
       color: var(--text); max-width: 100%; border-bottom: 0.5px solid var(--border);
     }
-    .cta-section h2 { color: var(--text); font-size: 28px; max-width: 760px; margin: 0 auto 12px; white-space: nowrap; }
+    .cta-section h2 { color: var(--text); font-size: 28px; max-width: 760px; margin: 0 auto 12px; word-wrap: break-word; overflow-wrap: break-word; }
     .cta-section .tagline { font-size: 16px; color: var(--text2); margin-bottom: 32px; }
 
     /* ── GRIDS ── */
     .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    @media (max-width: 640px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) { 
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .cta-section { padding: 48px 16px; }
+      .cta-section h2 { font-size: 24px; }
+      .cta-section .tagline { font-size: 14px; }
+      nav { padding: 12px 16px; }
+      .inner { padding: 0 16px; }
+    }
     @media (min-width: 641px) and (max-width: 860px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 640px) { .steps-row { grid-template-columns: repeat(2, 1fr); } .steps-row .step:nth-child(2) { border-right: none; } .steps-row .step:nth-child(-n+2) { border-bottom: 0.5px solid var(--border); } }
 
@@ -338,7 +345,7 @@
 
       <div class="grid-2">
         <div class="card">
-          <div class="accent-icon" style="background:#FAEEDA;"><svg viewBox="0 0 24 24" style="stroke:#854F0B;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><circle cx="16" cy="5" r="3"/></svg></div>
+          <div class="accent-icon" style="background:#FAEEDA;"><svg viewBox="0 0 24 24" style="stroke:#854F0B;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
           <div><h3>All voices in one place</h3><p>Connect your tools once, and Dots does the rest — surface patterns across projects, teams, geographies, and time.</p></div>
         </div>
         <div class="card">
@@ -346,7 +353,7 @@
           <div><h3>Insights waiting when you arrive</h3><p>No more weeks of manual work. Your insights are ready and waiting the moment you open the dashboard.</p></div>
         </div>
         <div class="card">
-          <div class="accent-icon" style="background:#FBEAF0;"><svg viewBox="0 0 24 24" style="stroke:#993556;"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div class="accent-icon" style="background:#FBEAF0;"><svg viewBox="0 0 24 24" style="stroke:#993556;"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7"/></svg></div>
           <div><h3>Traceable insights</h3><p>Every insight traces back to a real customer voice, so your team can make decisions with confidence and defend them.</p></div>
         </div>
         <div class="card">
@@ -390,7 +397,7 @@
   <section>
     <div class="inner">
     <h2>Built for every role shaping the product</h2>
-    <p style="font-size:14px;color:var(--text2);margin-top:-20px;margin-bottom:28px;line-height:1.6;">Whether you're tracking feature requests, surfacing customer pain points, or discovering new opportunities, Dots puts insights in your hands.</p>
+    <p style="font-size:14px;color:var(--text2);margin-top:-20px;margin-bottom:28px;line-height:1.6;">Whether you're tracking feature requests, surfacing customer pain points, or discovering new opportunities, Dots is built for your role.</p>
     <div class="grid-3">
       <div class="persona-card">
         <div class="persona-card-header" style="background:#D8F2EE; color:#0F6E56;">Product Owners</div>
