@@ -241,8 +241,14 @@
       .cta-section .tagline { font-size: 14px; }
       nav { padding: 12px 16px; }
       .inner { padding: 0 16px; }
+      .hero-video-wrap { width: 90%; }
+      .hero h1 { font-size: 32px; }
+      .hero .subtitle { font-size: 16px; }
     }
-    @media (min-width: 641px) and (max-width: 860px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 641px) and (max-width: 860px) { 
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .hero-video-wrap { width: 85%; }
+    }
     @media (max-width: 640px) { .steps-row { grid-template-columns: repeat(2, 1fr); } .steps-row .step:nth-child(2) { border-right: none; } .steps-row .step:nth-child(-n+2) { border-bottom: 0.5px solid var(--border); } }
 
   </style>
