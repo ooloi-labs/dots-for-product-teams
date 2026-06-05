@@ -48,47 +48,6 @@
     .nav-links a { font-size: 13px; color: #666; cursor: pointer; text-decoration: none; }
     .nav-links a:hover { color: var(--text); }
 
-    /* Dropdown */
-    .nav-dropdown { position: relative; }
-    .nav-dropdown-trigger {
-      font-size: 13px; color: #666; cursor: pointer;
-      display: flex; align-items: center; gap: 4px;
-      padding: 4px 0; user-select: none;
-    }
-    .nav-dropdown-trigger:hover { color: var(--text); }
-    .nav-dropdown-trigger svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 2; transition: transform 0.2s; }
-    .nav-dropdown:hover .nav-dropdown-trigger svg { transform: rotate(180deg); }
-    .nav-dropdown-menu {
-      display: none;
-      position: absolute;
-      top: calc(100% + 12px);
-      left: -16px;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
-      padding: 8px;
-      min-width: 260px;
-      z-index: 100;
-    }
-    .nav-dropdown:hover .nav-dropdown-menu { display: block; }
-    .nav-dropdown-item {
-      display: flex; align-items: center; gap: 12px;
-      padding: 10px 12px;
-      border-radius: var(--radius);
-      text-decoration: none;
-      color: var(--text);
-      transition: background 0.12s;
-    }
-    .nav-dropdown-item:hover { background: var(--surface-subtle); }
-    .nav-dropdown-icon {
-      width: 32px; height: 32px; border-radius: 8px;
-      background: var(--surface-subtle); border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .nav-dropdown-icon svg { width: 15px; height: 15px; stroke: var(--text2); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-    .nav-dropdown-item span { font-size: 13px; font-weight: 500; }
     .btn-primary {
       background: #111; color: #fff; font-size: 13px;
       padding: 8px 16px; border-radius: 8px; cursor: pointer; display: inline-block; font-weight: 500;
@@ -297,6 +256,7 @@
         <img src="https://framerusercontent.com/images/uB1AWiA6HkyTs5iUu7VSs7YdsfA.png?scale-down-to=512&width=1549&height=640" alt="Dots" style="height:28px;width:auto;display:block;"/>
       </a>
     </div>
+    <div class="btn-primary">Get a demo</div>
   </nav>
 
   <!-- 1. HERO — soft gradient -->
@@ -386,7 +346,7 @@
 
       <div class="grid-2">
         <div class="card">
-          <div class="accent-icon" style="background:#FAEEDA;"><svg viewBox="0 0 24 24" style="stroke:#854F0B;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div class="accent-icon" style="background:#FAEEDA;"><svg viewBox="0 0 24 24" style="stroke:#854F0B;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><circle cx="16" cy="5" r="3"/></svg></div>
           <div><h3>All voices in one place</h3><p>Connect your tools once, and Dots does the rest — surface patterns across projects, teams, geographies, and time.</p></div>
         </div>
         <div class="card">
@@ -394,7 +354,7 @@
           <div><h3>Insights waiting when you arrive</h3><p>No more weeks of manual work. Your insights are ready and waiting the moment you open the dashboard.</p></div>
         </div>
         <div class="card">
-          <div class="accent-icon" style="background:#FBEAF0;"><svg viewBox="0 0 24 24" style="stroke:#993556;"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <div class="accent-icon" style="background:#FBEAF0;"><svg viewBox="0 0 24 24" style="stroke:#993556;"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
           <div><h3>Traceable insights</h3><p>Every insight traces back to a real customer voice, so your team can make decisions with confidence and defend them.</p></div>
         </div>
         <div class="card">
@@ -422,7 +382,7 @@
   <section>
     <div class="inner">
     <h2>Built for every role shaping the product</h2>
-    <p style="font-size:14px;color:var(--text2);margin-top:-20px;margin-bottom:28px;line-height:1.6;">Whether you're tracking feature requests, surfacing customer pain points, or discovering new opportunities, Dots helps you find the answers that matter most to you.</p>
+    <p style="font-size:14px;color:var(--text2);margin-top:-20px;margin-bottom:28px;line-height:1.6;">Whether you're tracking feature requests, surfacing customer pain points, or discovering new opportunities, Dots puts insights in your hands.</p>
     <div class="grid-3">
       <div class="persona-card">
         <p class="persona-label">Product Owners</p>
