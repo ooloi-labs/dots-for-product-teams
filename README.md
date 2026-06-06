@@ -1,4 +1,4 @@
-# Dots for Product Owners — Landing Page
+# Dots for Product Teams — Landing Page
 
 A static marketing landing page for **Dots**, an AI-powered qualitative data analysis tool that helps product teams surface insights from scattered user data.
 
@@ -6,7 +6,7 @@ A static marketing landing page for **Dots**, an AI-powered qualitative data ana
 
 ## About the Product
 
-Dots aggregates qualitative data from multiple sources — interviews, support tickets, NPS surveys, app store reviews, and more — and uses AI to surface patterns, themes, and traceable insights. It's built for Product Owners, UX Researchers, and Customer Success teams.
+Dots aggregates qualitative data from multiple sources — interviews, support tickets, NPS surveys, app store reviews, and more — and uses AI to surface patterns, themes, and traceable insights. It's built for Product Teams, UX Researchers, and Customer Success teams.
 
 ---
 
@@ -18,7 +18,7 @@ Dots aggregates qualitative data from multiple sources — interviews, support t
 | 2 | Problem | Four pain points: scattered signals, analysis paralysis, shallow AI outputs, organizational blind spots |
 | 3 | Solution | What Dots brings — data flow diagram and feature cards |
 | 4 | How It Works | Four-step process: Add context → Bring data → Understand signals → Act |
-| 5 | Who It's For | Persona cards for Product Owners, UX Researchers, Customer Success & Support |
+| 5 | Who It's For | Persona cards for Product Teams, UX Researchers, Customer Success & Support |
 | 6 | CTA | Final call-to-action linking to the demo booking page |
 
 ---
