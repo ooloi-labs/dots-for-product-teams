@@ -25,6 +25,10 @@
       --radius-lg: 16px;
        --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
         --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04);
+      --gradient-bg:
+        radial-gradient(700px 480px at 50% 70px, rgba(129,210,199,0.14) 0%, rgba(167,220,214,0.075) 45%, rgba(255,255,255,0) 70%),
+        radial-gradient(800px 480px at 50% calc(100% - 50px), rgba(224,189,200,0.14) 0%, rgba(232,205,212,0.075) 45%, rgba(255,255,255,0) 70%),
+        #FFFFFF;
     }
     
     body {
@@ -61,7 +65,7 @@
       letter-spacing: -0.8px; line-height: 1.15; margin-bottom: 16px;
     }
     h2 {
-      font-size: 28px; font-weight: 400; line-height: 1.25; margin-bottom: 32px;
+      font-size: 28px; font-weight: 600; line-height: 1.25; margin-bottom: 32px;
     }
     .subtitle {
       font-size: 15px; color: var(--text2); line-height: 1.6;
@@ -69,10 +73,17 @@
     }
 
     /* ── HERO ── */
+    .cover-group {
+      position: relative;
+      background:
+        radial-gradient(700px 520px at 50% 120px, rgba(129,210,199,0.28) 0%, rgba(167,220,214,0.15) 45%, rgba(255,255,255,0) 70%),
+        radial-gradient(900px 620px at 50% calc(100% - 80px), rgba(224,189,200,0.28) 0%, rgba(232,205,212,0.15) 45%, rgba(255,255,255,0) 70%),
+        #FFFFFF;
+    }
     .hero {
       text-align: center;
-      background: #fff;
-      width: 100%; padding: 56px 0 64px; border-bottom: 0.5px solid var(--border);
+      background: transparent;
+      width: 100%; padding: 56px 0 64px;
       position: relative; overflow: hidden;
     }
     .hero-blob-blue {
@@ -95,11 +106,11 @@
     }
     .hero .inner { position: relative; z-index: 1; }
     .hero h1 { color: var(--text); font-size: 50px; }
-    .hero .subtitle { color: var(--text2); font-size: 19px; }
+    .hero .subtitle { color: var(--text); font-size: 19px; max-width: 700px; margin-left: auto; margin-right: auto; }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 12px; border: 0.5px solid var(--border-md);
-      border-radius: 999px; padding: 4px 14px; color: var(--text2); margin-bottom: 24px;
+      border-radius: 999px; padding: 4px 14px; color: var(--text); margin-bottom: 24px;
       background: rgba(255,255,255,0.7);
     }
     .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
@@ -113,7 +124,7 @@
       display: flex; justify-content: center;
     }
     .hero-video-wrap {
-      position: relative; width: 75%; height: 0; padding-top: 35.7%;
+      position: relative; width: 100%; aspect-ratio: 2 / 1;
       box-shadow: 0 4px 24px rgba(0,0,0,0.1); overflow: hidden;
       border-radius: 10px; will-change: transform; border: 0.5px solid var(--border);
     }
@@ -123,8 +134,8 @@
 
     /* ── PROBLEM — soft orange/pink section ── */
     .problem-section {
-      background: var(--surface-subtle); color: var(--text);
-      max-width: 100%; padding: 64px 0; border-bottom: 0.5px solid var(--border);
+      background: transparent; color: var(--text);
+      max-width: 100%; padding: 64px 0; border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border);
     }
     /* .problem-section and .how-section use .inner for layout */
     .problem-section h2 { color: var(--text); }
@@ -132,7 +143,7 @@
       background: #fff; border: 0.5px solid var(--border);
       border-radius: var(--radius-lg); padding: 28px;
     }
-    .problem-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 8px; color: var(--text); }
+    .problem-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--text); }
     .problem-card p { font-size: 14px; color: var(--text2); line-height: 1.65; }
     .problem-icon {
       width: 40px; height: 40px; border-radius: 10px;
@@ -152,7 +163,7 @@
     .card .accent-icon svg { width: 20px; height: 20px; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 
     /* ── HOW IT WORKS — light grey ── */
-    .how-section { background: var(--surface-subtle); max-width: 100%; padding: 64px 0; border-bottom: 0.5px solid var(--border); }
+    .how-section { background: var(--gradient-bg); max-width: 100%; padding: 64px 0; border-bottom: 0.5px solid var(--border); }
     .steps-row {
       display: grid; grid-template-columns: repeat(4, 1fr);
       gap: 0; border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden;
@@ -162,7 +173,7 @@
     .step:last-child { border-right: none; }
     .step-top { height: 80px; padding: 14px 18px 0; display: flex; flex-direction: column; justify-content: flex-start; }
     .step-num { font-size: 11px; color: var(--text3); margin-bottom: 10px; }
-    .step h3 { font-size: 15px; font-weight: 500; margin: 0; line-height: 1.3; }
+    .step h3 { font-size: 15px; font-weight: 600; margin: 0; line-height: 1.3; }
     .step-divider { height: 2px; margin: 10px 18px; border-radius: 2px; flex-shrink: 0; }
     .step-body { flex: 1; padding: 0 18px 18px; }
     .step p { font-size: 14px; color: var(--text2); line-height: 1.6; margin: 0; }
@@ -190,20 +201,20 @@
 
     /* ── WHO IT'S FOR ── */
     .persona-card { border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; background: var(--bg); display: flex; flex-direction: column; }
-    .persona-card-header { height: 40px; display: flex; align-items: center; padding: 0 22px; font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; }
+    .persona-card-header { height: 40px; display: flex; align-items: center; padding: 0 22px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; }
     .persona-card-body { flex: 1; padding: 18px 22px; }
-    .persona-card h3 { font-size: 14px; font-weight: 500; margin-bottom: 8px; line-height: 1.3; }
+    .persona-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 8px; line-height: 1.3; }
     .persona-card p { font-size: 14px; color: var(--text2); line-height: 1.6; }
 
 
     /* ── CTA — soft orange/pink gradient ── */
     .cta-section {
       text-align: center; padding: 80px 32px;
-      background: var(--surface-subtle);
+      background: var(--gradient-bg);
       color: var(--text); max-width: 100%; border-bottom: 0.5px solid var(--border);
     }
     .cta-section h2 { color: var(--text); font-size: 28px; max-width: 760px; margin: 0 auto 12px; word-wrap: break-word; overflow-wrap: break-word; }
-    .cta-section .tagline { font-size: 16px; color: var(--text2); margin-bottom: 32px; }
+    .cta-section .tagline { font-size: 16px; color: var(--text); margin-bottom: 32px; }
 
     /* ── GRIDS ── */
     .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
@@ -215,13 +226,11 @@
       .cta-section .tagline { font-size: 14px; }
       nav { padding: 12px 16px; }
       .inner { padding: 0 16px; }
-      .hero-video-wrap { width: 90%; }
       .hero h1 { font-size: 32px; }
       .hero .subtitle { font-size: 16px; }
     }
     @media (min-width: 641px) and (max-width: 860px) { 
       .grid-3 { grid-template-columns: repeat(2, 1fr); }
-      .hero-video-wrap { width: 85%; }
     }
     @media (max-width: 640px) { .steps-row { grid-template-columns: repeat(2, 1fr); } .steps-row .step:nth-child(2) { border-right: none; } .steps-row .step:nth-child(-n+2) { border-bottom: 0.5px solid var(--border); } }
 
@@ -238,10 +247,10 @@
     </div>
   </nav>
 
+  <!-- 1+2. COVER GROUP — hero + problem share one continuous gradient -->
+  <div class="cover-group">
   <!-- 1. HERO — soft gradient -->
   <div class="hero">
-    <div class="hero-blob-blue"></div>
-    <div class="hero-blob-pink"></div>
     <div class="inner">
       <div class="hero-badge"><span class="hero-badge-dot"></span>AI-powered product insights</div>
       <h1>Bring your user signals to the center of product decisions</h1>
@@ -251,7 +260,7 @@
       </div>
       <div class="hero-video-outer">
         <div class="hero-video-wrap">
-          <iframe loading="lazy" src="https://www.canva.com/design/DAHLU-dXZc4/bw66v52MsO3BvzBTuSqGhg/watch?embed" allowfullscreen allow="fullscreen"></iframe>
+          <iframe loading="lazy" src="https://www.youtube.com/embed/Nb_b4X4V5cg?si=7itRGm3MNLnLnaoO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -293,6 +302,8 @@
       </div>
     </div>
   </div>
+  </div>
+  <!-- /cover-group -->
 
   <!-- 3. SOLUTION / WHY DOTS -->
   <section>
